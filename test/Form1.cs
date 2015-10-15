@@ -26,6 +26,7 @@ namespace test
         {
             if(chkboxAutoEncrypt.Checked)
                 txtEncrypted.Text = encryptString(txtToEncrypt.Text);
+
         }
 
 
@@ -53,6 +54,21 @@ namespace test
         private void Form1_Load(object sender, EventArgs e)
         {
             chkboxAutoEncrypt.Checked = true;
+            rbtnEncrypt.Checked = true;
+        }
+
+        private void rbtnEncrypt_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtnEncrypt.Checked)
+            {
+                lblOne.Text = "Unencrypted";
+                lblTwo.Text = "Encrypted";
+            }
+            else
+            {
+                lblOne.Text = "Encrypted";
+                lblTwo.Text = "Unencrypted";
+            }
         }
     }
 }

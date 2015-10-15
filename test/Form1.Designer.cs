@@ -28,31 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblOne = new System.Windows.Forms.Label();
+            this.lblTwo = new System.Windows.Forms.Label();
             this.txtToEncrypt = new System.Windows.Forms.TextBox();
             this.txtEncrypted = new System.Windows.Forms.TextBox();
             this.btnEncrypt = new System.Windows.Forms.Button();
             this.chkboxAutoEncrypt = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbtnEncrypt = new System.Windows.Forms.RadioButton();
+            this.rbtnDecrypt = new System.Windows.Forms.RadioButton();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lblOne
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Unencrypted";
+            this.lblOne.AutoSize = true;
+            this.lblOne.Location = new System.Drawing.Point(46, 24);
+            this.lblOne.Name = "lblOne";
+            this.lblOne.Size = new System.Drawing.Size(68, 13);
+            this.lblOne.TabIndex = 0;
+            this.lblOne.Text = "Unencrypted";
             // 
-            // label2
+            // lblTwo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 125);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Encrypted";
+            this.lblTwo.AutoSize = true;
+            this.lblTwo.Location = new System.Drawing.Point(46, 125);
+            this.lblTwo.Name = "lblTwo";
+            this.lblTwo.Size = new System.Drawing.Size(55, 13);
+            this.lblTwo.TabIndex = 1;
+            this.lblTwo.Text = "Encrypted";
             // 
             // txtToEncrypt
             // 
@@ -91,20 +95,57 @@
             this.chkboxAutoEncrypt.Text = "Auto Encrypt";
             this.chkboxAutoEncrypt.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbtnDecrypt);
+            this.groupBox1.Controls.Add(this.rbtnEncrypt);
+            this.groupBox1.Location = new System.Drawing.Point(243, 218);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(169, 52);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Options";
+            // 
+            // rbtnEncrypt
+            // 
+            this.rbtnEncrypt.AutoSize = true;
+            this.rbtnEncrypt.Location = new System.Drawing.Point(6, 23);
+            this.rbtnEncrypt.Name = "rbtnEncrypt";
+            this.rbtnEncrypt.Size = new System.Drawing.Size(61, 17);
+            this.rbtnEncrypt.TabIndex = 0;
+            this.rbtnEncrypt.TabStop = true;
+            this.rbtnEncrypt.Text = "Encrypt";
+            this.rbtnEncrypt.UseVisualStyleBackColor = true;
+            this.rbtnEncrypt.CheckedChanged += new System.EventHandler(this.rbtnEncrypt_CheckedChanged);
+            // 
+            // rbtnDecrypt
+            // 
+            this.rbtnDecrypt.AutoSize = true;
+            this.rbtnDecrypt.Location = new System.Drawing.Point(91, 23);
+            this.rbtnDecrypt.Name = "rbtnDecrypt";
+            this.rbtnDecrypt.Size = new System.Drawing.Size(62, 17);
+            this.rbtnDecrypt.TabIndex = 1;
+            this.rbtnDecrypt.TabStop = true;
+            this.rbtnDecrypt.Text = "Decrypt";
+            this.rbtnDecrypt.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 262);
+            this.ClientSize = new System.Drawing.Size(449, 282);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.chkboxAutoEncrypt);
             this.Controls.Add(this.btnEncrypt);
             this.Controls.Add(this.txtEncrypted);
             this.Controls.Add(this.txtToEncrypt);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTwo);
+            this.Controls.Add(this.lblOne);
             this.Name = "Form1";
             this.Text = "Encryption Tool";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,12 +153,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblOne;
+        private System.Windows.Forms.Label lblTwo;
         private System.Windows.Forms.TextBox txtToEncrypt;
         private System.Windows.Forms.TextBox txtEncrypted;
         private System.Windows.Forms.Button btnEncrypt;
         private System.Windows.Forms.CheckBox chkboxAutoEncrypt;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rbtnDecrypt;
+        private System.Windows.Forms.RadioButton rbtnEncrypt;
     }
 }
 
