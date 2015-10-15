@@ -16,5 +16,43 @@ namespace test
         {
             InitializeComponent();
         }
+
+        private void btnEncrypt_Click(object sender, EventArgs e)
+        {
+            txtEncrypted.Text = encryptString(txtToEncrypt.Text);
+        }
+
+        private void txtToEncrypt_TextChanged(object sender, EventArgs e)
+        {
+            if(chkboxAutoEncrypt.Checked)
+                txtEncrypted.Text = encryptString(txtToEncrypt.Text);
+        }
+
+
+        public string encryptString(string message)
+        {
+            string encrypted = null;
+            byte[] asciiValues = Encoding.ASCII.GetBytes(message);
+
+
+
+            int[] v = new int[asciiValues.Length];
+            for (int i = 0; i < v.Length; i++)
+            {
+                v[i] = Convert.ToInt32(asciiValues[i]) + 7;
+            }
+
+            for (int i = 0; i < asciiValues.Length; i++)
+            {
+                encrypted += Convert.ToChar(v[i]);
+            }
+
+            return encrypted;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            chkboxAutoEncrypt.Checked = true;
+        }
     }
 }
