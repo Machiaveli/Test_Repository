@@ -34,6 +34,8 @@
             this.txtEncrypted = new System.Windows.Forms.TextBox();
             this.btnEncrypt = new System.Windows.Forms.Button();
             this.chkboxAutoEncrypt = new System.Windows.Forms.CheckBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // lblOne
@@ -91,11 +93,25 @@
             this.chkboxAutoEncrypt.Text = "Auto Encrypt";
             this.chkboxAutoEncrypt.UseVisualStyleBackColor = true;
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(49, 259);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(362, 22);
+            this.progressBar1.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 282);
+            this.ClientSize = new System.Drawing.Size(449, 289);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.chkboxAutoEncrypt);
             this.Controls.Add(this.btnEncrypt);
             this.Controls.Add(this.txtEncrypted);
@@ -118,6 +134,8 @@
         private System.Windows.Forms.TextBox txtEncrypted;
         private System.Windows.Forms.Button btnEncrypt;
         private System.Windows.Forms.CheckBox chkboxAutoEncrypt;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
