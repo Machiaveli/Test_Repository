@@ -20,6 +20,7 @@ namespace test
         private void btnEncrypt_Click(object sender, EventArgs e)
         {
             txtEncrypted.Text = encryptString(txtToEncrypt.Text);
+            MessageBox.Show("Your message has been encrypted!");
         }
 
         private void txtToEncrypt_TextChanged(object sender, EventArgs e)
