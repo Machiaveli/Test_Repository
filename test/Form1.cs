@@ -21,6 +21,7 @@ namespace test
         {
             txtEncrypted.Text = encryptString(txtToEncrypt.Text);
             MessageBox.Show("Your message has been encrypted!");
+            MessageBox.Show("Merge Succesful!");
         }
 
         private void txtToEncrypt_TextChanged(object sender, EventArgs e)
