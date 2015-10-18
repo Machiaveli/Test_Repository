@@ -1,6 +1,6 @@
 ﻿namespace test
 {
-    partial class Form1
+    partial class lblFeedback
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblOne = new System.Windows.Forms.Label();
-            this.lblTwo = new System.Windows.Forms.Label();
+            this.lblEncrypted = new System.Windows.Forms.Label();
             this.txtToEncrypt = new System.Windows.Forms.TextBox();
             this.txtEncrypted = new System.Windows.Forms.TextBox();
             this.btnEncrypt = new System.Windows.Forms.Button();
@@ -37,6 +37,7 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.btnTest = new System.Windows.Forms.Button();
+            this.lblStats = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblOne
@@ -48,14 +49,14 @@
             this.lblOne.TabIndex = 0;
             this.lblOne.Text = "Unencrypted";
             // 
-            // lblTwo
+            // lblEncrypted
             // 
-            this.lblTwo.AutoSize = true;
-            this.lblTwo.Location = new System.Drawing.Point(46, 125);
-            this.lblTwo.Name = "lblTwo";
-            this.lblTwo.Size = new System.Drawing.Size(55, 13);
-            this.lblTwo.TabIndex = 1;
-            this.lblTwo.Text = "Encrypted";
+            this.lblEncrypted.AutoSize = true;
+            this.lblEncrypted.Location = new System.Drawing.Point(46, 125);
+            this.lblEncrypted.Name = "lblEncrypted";
+            this.lblEncrypted.Size = new System.Drawing.Size(55, 13);
+            this.lblEncrypted.TabIndex = 1;
+            this.lblEncrypted.Text = "Encrypted";
             // 
             // txtToEncrypt
             // 
@@ -117,20 +118,30 @@
             this.btnTest.UseVisualStyleBackColor = true;
             this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
-            // Form1
+            // lblStats
+            // 
+            this.lblStats.AutoSize = true;
+            this.lblStats.Location = new System.Drawing.Point(118, 125);
+            this.lblStats.Name = "lblStats";
+            this.lblStats.Size = new System.Drawing.Size(55, 13);
+            this.lblStats.TabIndex = 8;
+            this.lblStats.Text = "Feedback";
+            // 
+            // lblFeedback
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(449, 289);
+            this.Controls.Add(this.lblStats);
             this.Controls.Add(this.btnTest);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.chkboxAutoEncrypt);
             this.Controls.Add(this.btnEncrypt);
             this.Controls.Add(this.txtEncrypted);
             this.Controls.Add(this.txtToEncrypt);
-            this.Controls.Add(this.lblTwo);
+            this.Controls.Add(this.lblEncrypted);
             this.Controls.Add(this.lblOne);
-            this.Name = "Form1";
+            this.Name = "lblFeedback";
             this.Text = "Encryption Tool - v2";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -141,7 +152,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblOne;
-        private System.Windows.Forms.Label lblTwo;
+        private System.Windows.Forms.Label lblEncrypted;
         private System.Windows.Forms.TextBox txtToEncrypt;
         private System.Windows.Forms.TextBox txtEncrypted;
         private System.Windows.Forms.Button btnEncrypt;
@@ -149,6 +160,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button btnTest;
+        private System.Windows.Forms.Label lblStats;
     }
 }
 

@@ -8,12 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Diagnostics;
 
 namespace test
 {
-    public partial class Form1 : Form
+    public partial class lblFeedback : Form
     {
-        public Form1()
+        Stopwatch stopWatch = new Stopwatch();
+        TimeSpan ts;
+        public lblFeedback()
         {
             InitializeComponent();
             progressBar1.Visible = true;
@@ -30,6 +33,15 @@ namespace test
 
         private void txtToEncrypt_TextChanged(object sender, EventArgs e)
         {
+            if (chkboxAutoEncrypt.Checked)
+            {
+                stopWatch.Start();
+                txtEncrypted.Text = encryptString(txtToEncrypt.Text);
+                stopWatch.Stop();
+                ts = stopWatch.Elapsed;
+                string[] words = txtToEncrypt.Text.Split(' ');
+                lblStats.Text = words.Length + " words encrypted in " + ts.Seconds + "." + ts.Milliseconds + " Seconds";
+            }
         }
 
 
@@ -37,8 +49,6 @@ namespace test
         {
             string encrypted = null;
             byte[] asciiValues = Encoding.ASCII.GetBytes(message);
-
-
 
             int[] v = new int[asciiValues.Length];
             for (int i = 0; i < v.Length; i++)
@@ -83,13 +93,12 @@ namespace test
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            if (chkboxAutoEncrypt.Checked)
                 txtEncrypted.Text = encryptString(txtToEncrypt.Text);
         }
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hi!","Test");
+            MessageBox.Show("Conflicting code Test","Test");
         }
 
     }
