@@ -33,6 +33,11 @@ namespace test
 
         private void txtToEncrypt_TextChanged(object sender, EventArgs e)
         {
+            if (txtToEncrypt.Text.Length > 0)
+                lblStats.Visible = true;
+            else
+                lblStats.Visible = false;
+
             if (chkboxAutoEncrypt.Checked)
             {
                 stopWatch.Start();
@@ -41,7 +46,6 @@ namespace test
                 ts = stopWatch.Elapsed;
                 string[] words = txtToEncrypt.Text.Split(' ');
                 lblStats.Text = words.Length + " words encrypted in " + ts.Seconds + "." + ts.Milliseconds + " Seconds";
-                MessageBox.Show("Woohoooo");
             }
         }
 
@@ -68,6 +72,7 @@ namespace test
         private void Form1_Load(object sender, EventArgs e)
         {
             chkboxAutoEncrypt.Checked = true;
+            lblStats.Visible = false;
         }
 
         private void rbtnEncrypt_CheckedChanged(object sender, EventArgs e)
