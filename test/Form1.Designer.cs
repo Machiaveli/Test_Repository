@@ -36,6 +36,7 @@
             this.chkboxAutoEncrypt = new System.Windows.Forms.CheckBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.btnTest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblOne
@@ -106,11 +107,22 @@
             this.progressBar1.Size = new System.Drawing.Size(362, 22);
             this.progressBar1.TabIndex = 6;
             // 
+            // btnTest
+            // 
+            this.btnTest.Location = new System.Drawing.Point(335, 226);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(75, 23);
+            this.btnTest.TabIndex = 7;
+            this.btnTest.Text = "Test";
+            this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(449, 289);
+            this.Controls.Add(this.btnTest);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.chkboxAutoEncrypt);
             this.Controls.Add(this.btnEncrypt);
@@ -136,6 +148,7 @@
         private System.Windows.Forms.CheckBox chkboxAutoEncrypt;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Button btnTest;
     }
 }
 
