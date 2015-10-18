@@ -87,5 +87,10 @@ namespace test
                 txtEncrypted.Text = encryptString(txtToEncrypt.Text);
         }
 
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hi!","Test");
+        }
+
     }
 }
