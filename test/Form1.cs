@@ -90,7 +90,7 @@ namespace test
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Conflict Test","Test");
+            MessageBox.Show("Conflicting code Test","Test");
         }
 
     }
