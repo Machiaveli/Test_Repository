@@ -30,6 +30,8 @@ namespace test
 
         private void txtToEncrypt_TextChanged(object sender, EventArgs e)
         {
+            if (chkboxAutoEncrypt.Checked)
+                txtEncrypted.Text = encryptString(txtToEncrypt.Text);
         }
 
 
@@ -83,13 +85,12 @@ namespace test
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            if (chkboxAutoEncrypt.Checked)
                 txtEncrypted.Text = encryptString(txtToEncrypt.Text);
         }
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hi!","Test");
+            MessageBox.Show("Conflict Test","Test");
         }
 
     }
