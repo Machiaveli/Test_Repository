@@ -46,10 +46,6 @@ namespace test
                 ts = stopWatch.Elapsed;
                 string[] words = txtToEncrypt.Text.Split(' ');
                 lblStats.Text = words.Length + " words encrypted in " + ts.Seconds + "." + ts.Milliseconds + " Seconds";
-
-                MessageBox.Show("How dare master branch remove my message >:(");
-                MessageBox.Show("Master Branch's message Sucks, this is much better");
-                MessageBox.Show("Master Branch Added Code again");
             }
         }
 
