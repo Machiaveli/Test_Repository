@@ -46,7 +46,9 @@ namespace test
                 ts = stopWatch.Elapsed;
                 string[] words = txtToEncrypt.Text.Split(' ');
                 lblStats.Text = words.Length + " words encrypted in " + ts.Seconds + "." + ts.Milliseconds + " Seconds";
+
                 MessageBox.Show("Secondary branch added code");
+                MessageBox.Show("Master Branch Added Code");
             }
         }
 
