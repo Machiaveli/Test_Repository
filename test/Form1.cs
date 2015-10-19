@@ -41,7 +41,7 @@ namespace test
                 ts = stopWatch.Elapsed;
                 string[] words = txtToEncrypt.Text.Split(' ');
                 lblStats.Text = words.Length + " words encrypted in " + ts.Seconds + "." + ts.Milliseconds + " Seconds";
-                MessageBox.Show("Woohooo");
+                MessageBox.Show("Woohoooo");
             }
         }
 
